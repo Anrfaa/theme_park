@@ -556,3 +556,100 @@ body {
     font-size: 26px;
   }
 }
+
+/* =========================
+   Contact Section Styles
+   ========================= */
+.section-contact .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 24px;
+}
+
+.section-contact .contact-form {
+  flex: 1 1 320px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(30,58,138,0.08);
+  padding: 28px 22px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+}
+
+.section-contact .contact-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--primary-color);
+}
+
+.section-contact .contact-form input,
+.section-contact .contact-form textarea {
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #f9fafb;
+  transition: border 0.18s;
+}
+
+.section-contact .contact-form input:focus,
+.section-contact .contact-form textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.section-contact .contact-form button {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.section-contact .contact-form button:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.section-contact .contact-info {
+  flex: 1 1 220px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 28px 22px;
+  box-shadow: 0 2px 8px rgba(30,58,138,0.04);
+  min-width: 220px;
+}
+
+.section-contact .contact-info h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+}
+
+.section-contact .contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section-contact .contact-info li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+@media (max-width: 800px) {
+  .section-contact .contact-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
