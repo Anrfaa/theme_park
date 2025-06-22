@@ -2,9 +2,13 @@
    Theme & Base Styles
    ========================= */
 :root {
-  --primary-color: #1e3a8a;
+  --primary-color:#1e3a8a;
   --secondary-color: #fbbf24;
   --third-color: #f3f4f6;
+
+  --gradient-primary: linear-gradient(90deg, #1e3a8a 0%, #fbbf24 100%);
+  --gradient-secondary: linear-gradient(90deg, #1e3a8a 0%, #60a5fa 100%);
+  --gradient-third: linear-gradient(90deg, #fbbf24 0%, #fff 100%);
 }
 
 body {
