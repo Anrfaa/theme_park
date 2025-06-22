@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Theme Park Home</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <iframe src="components/navbar.html" class="navbar-frame" title="Navigation Bar"></iframe>
+         <!-- Global header section -->
+        <div class="global-header">
+            <div class="global-header-bg"></div>
+            <h1 class="global-header-title">Homepage</h1>
+        </div>
+        
+        <!-- make sure the class name will be like section-part name to prevent any compile issues-->
+        <main class="section-container section-home">
+            <h1 class="header-home">Welcome to Our Theme Park!</h1>
+            <p>Explore the best rides, delicious food, exciting shows, and more!</p>
+
+            <!-- Highlights/Features Section -->
+            <div class="features-list">
+                <div class="feature-card">
+                    <span class="feature-icon">🎢</span>
+                    <h3>Thrilling Rides</h3>
+                    <p>Experience adrenaline-pumping roller coasters and family-friendly attractions for all ages.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🍔</span>
+                    <h3>Delicious Food</h3>
+                    <p>Enjoy a wide variety of tasty treats, from classic snacks to gourmet meals and desserts.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🎉</span>
+                    <h3>Live Shows</h3>
+                    <p>Be amazed by daily performances, parades, and special seasonal events throughout the year.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🎁</span>
+                    <h3>Exclusive Packages</h3>
+                    <p>Choose from family, individual, and seasonal packages to make your visit unforgettable.</p>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="cta-section">
+                <h2>Ready for an Adventure?</h2>
+                <a href="packages.html" class="cta-button">View Packages</a>
+            </div>
+
+            <!-- New: Upcoming Events Section -->
+            <section class="events-section">
+                <h2>Upcoming Events</h2>
+                <div class="events-list">
+                    <div class="event-card">
+                        <span class="event-icon">🌟</span>
+                        <h4>Summer Night Parade</h4>
+                        <p>Join us every Saturday night for a magical parade with lights, music, and your favorite characters!</p>
+                        <span class="event-date">Every Saturday, 7:00 PM</span>
+                    </div>
+                    <div class="event-card">
+                        <span class="event-icon">👻</span>
+                        <h4>Spooky Halloween Fest</h4>
+                        <p>Enjoy haunted houses, trick-or-treating, and costume contests all October long!</p>
+                        <span class="event-date">October 1 - 31</span>
+                    </div>
+                    <div class="event-card">
+                        <span class="event-icon">🎅</span>
+                        <h4>Winter Wonderland</h4>
+                        <p>Celebrate the holidays with snow shows, festive treats, and a visit from Santa!</p>
+                        <span class="event-date">December 10 - January 2</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- New: Visitor Info Section -->
+            <section class="info-section">
+                <h2>Plan Your Visit</h2>
+                <ul class="info-list">
+                    <li><strong>Opening Hours:</strong> 9:00 AM – 10:00 PM, 7 days a week</li>
+                    <li><strong>Location:</strong> 123 Theme Park Ave, Fun City</li>
+                    <li><strong>Parking:</strong> Free parking available for all guests</li>
+                    <li><strong>Accessibility:</strong> Our park is accessible for all visitors</li>
+                </ul>
+            </section>
+
+            <!-- New: Newsletter Signup -->
+            <section class="newsletter-section">
+                <h2>Stay Updated!</h2>
+                <p>Subscribe to our newsletter for the latest news, offers, and events.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </section>
+        </main>
+
+        <iframe src="components/footer.html" class="footer-frame" title="Footer"></iframe>
+    </body>
+</html>
