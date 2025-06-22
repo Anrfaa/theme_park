@@ -1,4 +1,6 @@
-/* Theme colors */
+/* =========================
+   Theme & Base Styles
+   ========================= */
 :root {
   --primary-color: #1e3a8a;
   --secondary-color: #fbbf24;
@@ -15,7 +17,9 @@ body {
   box-sizing: border-box;
 }
 
-/* Iframe styles */
+/* =========================
+   Iframe Styles
+   ========================= */
 .navbar-frame {
   width: 100%;
   height: 80px;
@@ -34,13 +38,26 @@ body {
   z-index: 1000;
 }
 
-/* Global Class */
+/* =========================
+   Layout & Utility Classes
+   ========================= */
 .section-container {
   width: 100%;
   max-width: 1200px;
   margin: 32px auto 0 auto;
   padding: 32px 24px;
   box-sizing: border-box;
+}
+
+.scrollable-section {
+  overflow-y: auto;
+  /* max-height: 70vh; */
+  max-height: 800px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(30,58,138,0.04);
+  padding: 16px;
+  margin-bottom: 32px;
 }
 
 /* Responsive adjustment */
@@ -50,6 +67,9 @@ body {
   }
 }
 
+/* =========================
+   Global Header
+   ========================= */
 .global-header {
   position: relative;
   width: 100%;
@@ -74,18 +94,35 @@ body {
 
 /* If you don't have an image, comment out the background line above and use a gradient or color */
 
-.global-header-title {
+.global-header-content {
   position: relative;
   z-index: 2;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.global-header-title {
   color: #fff;
   font-size: 2.8rem;
   font-weight: 800;
   letter-spacing: 2px;
   text-shadow: 0 4px 24px rgba(30,58,138,0.25), 0 1px 2px #000;
-  text-align: center;
-  margin: 0;
+  margin: 0 0 12px 0;
   width: 100%;
   pointer-events: none;
+}
+
+.global-header-desc {
+  color: #f3f4f6;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(30,58,138,0.18);
+  max-width: 600px;
 }
 
 @media (max-width: 700px) {
@@ -97,24 +134,24 @@ body {
   }
 }
 
-/* Make section scrollable if content overflows */
-.scrollable-section {
-  overflow-y: auto;
-  /* max-height: 70vh; */
-  max-height: 800px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(30,58,138,0.04);
-  padding: 16px;
-  margin-bottom: 32px;
-}
-
-/* Tini */
+/* =========================
+   Packages Section
+   ========================= */
 .packages-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 28px;
+  margin-top: 5px;
+}
+
+.package-group-title {
+  grid-column: 1 / -1;
   margin-top: 32px;
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .package-card {
@@ -174,17 +211,17 @@ body {
   color: var(--primary-color);
 }
 
-.package-group-title {
-  grid-column: 1 / -1;
-  margin-top: 32px;
-  margin-bottom: 8px;
-  font-size: 1.3rem;
-  color: var(--primary-color);
-  font-weight: 700;
-  letter-spacing: 1px;
+.package-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 14px;
 }
 
-/* Section heading improvements */
+/* =========================
+   Section Headings (General)
+   ========================= */
 .section-container h2 {
   font-size: 2rem;
   font-weight: 700;
@@ -198,7 +235,9 @@ body {
   margin-bottom: 18px;
 }
 
-/* homapage */
+/* =========================
+   Homepage Features Section
+   ========================= */
 .features-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -228,6 +267,9 @@ body {
   margin-bottom: 12px;
 }
 
+/* =========================
+   Homepage CTA Section
+   ========================= */
 .cta-section {
   text-align: center;
   margin-top: 32px;
@@ -252,6 +294,9 @@ body {
   color: #fff;
 }
 
+/* =========================
+   Homepage Events Section
+   ========================= */
 .events-section {
   margin: 48px 0 32px 0;
 }
@@ -282,6 +327,9 @@ body {
   font-size: 0.98rem;
 }
 
+/* =========================
+   Homepage Info Section
+   ========================= */
 .info-section {
   margin: 40px 0 32px 0;
 }
@@ -300,8 +348,13 @@ body {
   content: "ℹ️";
   position: absolute;
   left: 0;
+  font-size: 0.8rem;
+  top: 0px;
 }
 
+/* =========================
+   Homepage Newsletter Section
+   ========================= */
 .newsletter-section {
   margin: 40px 0 0 0;
   text-align: center;
