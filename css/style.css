@@ -77,7 +77,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 32px;
+  /* margin-bottom: 32px; */
   overflow: hidden;
   background: var(--primary-color);
 }
@@ -91,8 +91,6 @@ body {
   opacity: 0.5;
   z-index: 1;
 }
-
-/* If you don't have an image, comment out the background line above and use a gradient or color */
 
 .global-header-content {
   position: relative;
@@ -387,4 +385,94 @@ body {
 .newsletter-form button:hover {
   background: var(--primary-color);
   color: #fff;
+}
+
+/* =========================
+   Park Section Styles
+   ========================= */
+.section-park {
+    margin: 0;
+    font-family: 'Fredoka', cursive;
+    background: #fffdf5;
+    color: #333;
+}
+
+.section-park .park-section {
+    padding: 60px 20px;
+}
+
+.section-park .section-inner {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-park .park-title {
+    font-size: 40px;
+    color: #fff;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    padding: 15px 25px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.section-park .park-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+.section-park .park-section:nth-child(odd) {
+    background: #ffe7e0;
+}
+
+.section-park .park-section:nth-child(even) {
+    background: #e0f7f4;
+}
+
+.section-park h3 {
+    color: #f06292;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+.section-park ul {
+    padding-left: 20px;
+}
+
+.section-park li {
+    margin-bottom: 8px;
+}
+
+.section-park .info-box {
+    margin-top: 25px;
+    padding: 20px 25px;
+    border-radius: 15px;
+    background: #fff8dc;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-size: 16px;
+}
+
+.section-park .info-box h4 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #ff5722;
+}
+
+.section-park .info-box.bring {
+    background: #e0f7fa;
+    border-left: 8px solid #00bcd4;
+}
+
+.section-park .info-box.tips {
+    background: #fff9c4;
+    border-left: 8px solid #fdd835;
+}
+
+@media (max-width: 768px) {
+    .section-park .park-title {
+        font-size: 26px;
+    }
 }
