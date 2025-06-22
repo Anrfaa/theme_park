@@ -476,3 +476,83 @@ body {
         font-size: 26px;
     }
 }
+
+/* =========================
+   Ride Section Styles
+   ========================= */
+.section-ride {
+  font-family: 'Fredoka', cursive;
+  /* background: #fffdf5; */
+  color: #333;
+}
+
+.section-ride .rides {
+  padding: 60px 20px;
+}
+
+.section-ride .rides h2 {
+  font-size: 40px;
+  color: #fff;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  padding: 15px 25px;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.section-ride .ride-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-ride .ride-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  width: 300px;
+  overflow: hidden;
+}
+
+.section-ride .ride-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.section-ride .ride-card h3 {
+  color: #f06292;
+  font-size: 20px;
+  margin: 15px;
+}
+
+.section-ride .ride-card p {
+  font-size: 15px;
+  color: #555;
+  margin: 0 15px 15px;
+}
+
+.section-ride footer {
+  background: linear-gradient(to right, #84fab0, #8fd3f4);
+  text-align: center;
+  color: #333;
+  padding: 25px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .section-ride nav ul {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+  }
+
+  .section-ride .rides h2 {
+    font-size: 26px;
+  }
+}
