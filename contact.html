@@ -19,6 +19,17 @@
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required placeholder="you@email.com">
 
+                    <label for="subject">Subject / Topic</label>
+                    <select id="subject" name="subject" required>
+                      <option value="" disabled selected>-- Please select --</option>
+                      <option value="ticket">Ticket Issue</option>
+                      <option value="ride">Ride Information</option>
+                      <option value="feedback">General Feedback</option>
+                      <option value="accessibility">Accessibility</option>
+                      <option value="lost-found">Lost &amp; Found</option>
+                      <option value="other">Other</option>
+                    </select>
+
                     <label for="message">Message</label>
                     <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
 
