@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Theme Park</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="sidebar-toggle-btn" id="sidebarToggle" aria-label="Open sidebar">&#9776;</button>
+        <nav class="sidebar" id="sidebar">
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">&times;</button>
+        <ul style="margin-top: 40px;">
+            <li><a href="index.html">🏠 Home</a></li>
+            <li>
+            <a href="ride.html">🎢 Rides</a>
+            <ul class="sidebar-submenu">
+                <li><a href="ride.html#category1">Category 1</a></li>
+                <li><a href="ride.html#category2">Category 2</a></li>
+                <li><a href="ride.html#category3">Category 3</a></li>
+            </ul>
+            </li>
+            <li>
+            <a href="packages.html">🎟 Packages</a>
+            <ul class="sidebar-submenu">
+                <li><a href="packages.html#offer1">Offer 1</a></li>
+                <li><a href="packages.html#offer2">Offer 2</a></li>
+            </ul>
+            </li>
+            <li><a href="plan_your_visit.html">🗺 Plan Your Visit</a></li>
+            <li><a href="#book.html">🎫 Book Your Tickets</a></li>
+            <li><a href="contact.html">📞 Contact & Support</a></li>
+        </ul>
+        <div class="sidebar-bottom">
+            <a href="#login.html" class="sidebar-bottom-link">Log In</a>
+            <a href="#register.html" class="sidebar-bottom-link">Create Account</a>
+        </div>
+        </nav>
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <iframe src="components/navbar.html" class="navbar-frame" title="Navigation Bar"></iframe>
+
+  <!-- Global header section -->
+  <div class="global-header">
+    <div class="global-header-bg"></div>
+    <div class="global-header-content">
+      <h1 class="global-header-title">Contact</h1>
+      <p class="global-header-desc">We'd love to hear from you!</p>
+    </div>
+  </div>
+
+  <main class="section-container section-contact">
+    <h2>Contact Us</h2>
+    <p class="contact-intro">Have questions, suggestions, or feedback? We’d love to hear from you!</p>
+
+    <div class="contact-content">
+      <form class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your Full Name">
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="1" max="120" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="you@email.com">
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="xxx-xxxxxxx">
+
+        <label for="themepark">Select Theme Park</label>
+        <select id="themepark" name="themepark" required>
+          <option value="">-- Please select --</option>
+          <option value="splash">Splash Mania</option>
+          <option value="escape">Escape Penang</option>
+          <option value="genting">Genting Skyworld</option>
+          <option value="sunway">Sunway Lagoon</option>
+        </select>
+
+        <label for="subject">Subject / Topic</label>
+        <select id="subject" name="subject" required>
+          <option value="" disabled selected>-- Please select --</option>
+          <option value="ticket">Ticket Issue</option>
+          <option value="ride">Ride Information</option>
+          <option value="feedback">General Feedback</option>
+          <option value="accessibility">Accessibility</option>
+          <option value="lost-found">Lost and Found</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="visit-date">Date of Visit</label>
+        <input type="date" id="visit-date" name="visit_date">
+
+        <label for="satisfaction">Satisfaction (1-10)</label>
+        <input type="range" id="satisfaction" name="satisfaction" min="1" max="10">
+
+        <label for="referral">How did you hear about us?</label>
+        <select id="referral" name="referral">
+          <option value="">-- Select --</option>
+          <option value="social">Social Media</option>
+          <option value="search">Google Search</option>
+          <option value="friend">Friend/Family</option>
+          <option value="ad">Online Ad</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <ul>
+          <li><strong>Email:</strong> info@themepark.com</li>
+          <li><strong>Phone:</strong> +60 12-345 6789</li>
+          <li><strong>Support Hours:</strong> Mon–Fri, 9am–6pm</li>
+        </ul>
+      </div>
+    </div>
+
+	<!-- Button to View XML Page -->
+	<a href="contact.xml" class="cta-button" target="_blank" style="margin-top: 20px; display: inline-block;">
+	  View Submitted Data
+	</a>
+
+  <iframe src="components/footer.html" class="footer-frame" title="Footer"></iframe>
+  
+	<script>
+	  const form = document.querySelector(".contact-form");
+
+	  form.addEventListener("submit", function(event) {
+		event.preventDefault(); // prevent actual form submission
+
+		// Collect form data
+		const formData = {
+		  name: form.name.value,
+		  age: form.age.value,
+		  email: form.email.value,
+		  phone: form.phone.value,
+		  themepark: form.themepark.value,
+		  subject: form.subject.value,
+		  visitdate: form["visit_date"].value,
+		  satisfaction: form.satisfaction.value,
+		  referral: form.referral.value,
+		  message: form.message.value
+		};
+
+		// Save as JSON string in localStorage
+		localStorage.setItem("contactData", JSON.stringify(formData));
+
+		alert("Your message has been saved locally!");
+
+		form.reset(); // optional: clear form
+	  });
+	</script>
+    <script>
+        // Sidebar open/close logic
+        const sidebar = document.getElementById('sidebar');
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebarClose = document.getElementById('sidebarClose');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+        function openSidebar() {
+            sidebar.classList.add('open');
+            sidebarOverlay.style.display = 'block';
+        }
+        function closeSidebar() {
+            sidebar.classList.remove('open');
+            sidebarOverlay.style.display = 'none';
+        }
+
+        sidebarToggle.addEventListener('click', openSidebar);
+        sidebarClose.addEventListener('click', closeSidebar);
+        sidebarOverlay.addEventListener('click', closeSidebar);
+
+        // Optional: Close sidebar with ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") closeSidebar();
+        });
+    </script>
+
+</body>
+</html>

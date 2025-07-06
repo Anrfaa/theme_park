@@ -2,9 +2,13 @@
    Theme & Base Styles
    ========================= */
 :root {
-  --primary-color: #1e3a8a;
+  --primary-color:#0c1733;
   --secondary-color: #fbbf24;
   --third-color: #f3f4f6;
+
+  --gradient-primary: linear-gradient(90deg, #1e3a8a 0%, #fbbf24 100%);
+  --gradient-secondary: linear-gradient(90deg, #1e3a8a 0%, #60a5fa 100%);
+  --gradient-third: linear-gradient(90deg, #fbbf24 0%, #fff 100%);
 }
 
 body {
@@ -77,7 +81,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 32px;
+  /* margin-bottom: 32px; */
   overflow: hidden;
   background: var(--primary-color);
 }
@@ -91,8 +95,6 @@ body {
   opacity: 0.5;
   z-index: 1;
 }
-
-/* If you don't have an image, comment out the background line above and use a gradient or color */
 
 .global-header-content {
   position: relative;
@@ -137,86 +139,153 @@ body {
 /* =========================
    Packages Section
    ========================= */
-.packages-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
-  margin-top: 5px;
-}
-
-.package-group-title {
-  grid-column: 1 / -1;
-  margin-top: 32px;
-  margin-bottom: 8px;
-  font-size: 1.3rem;
+.packages-table-title {
+  text-align: center;
+  font-size: 2rem;
   color: var(--primary-color);
-  font-weight: 700;
-  letter-spacing: 1px;
+  margin-bottom: 24px;
+  font-weight: 800;
 }
 
-.package-card {
+.packages-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
   background: #fff;
   border-radius: 12px;
+  overflow: hidden;
   box-shadow: 0 2px 12px rgba(30,58,138,0.08);
-  padding: 28px 20px 20px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  transition: transform 0.15s, box-shadow 0.15s;
-  border: 1px solid #e5e7eb;
+  font-size: 1rem;
+  margin-bottom: 5%;
 }
 
-.package-card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 6px 24px rgba(30,58,138,0.13);
-  border-color: var(--secondary-color);
+.packages-table th, .packages-table td {
+  padding: 18px 12px;
+  text-align: left;
+  vertical-align: top;
 }
 
-.package-card h3 {
-  margin-top: 0;
-  margin-bottom: 12px;
-  font-size: 1.25rem;
-  color: var(--primary-color);
+.packages-table th {
+  background: var(--primary-color);
+  color: #fff;
   font-weight: 700;
+  font-size: 1.1rem;
+  border-bottom: 2px solid var(--secondary-color);
 }
 
-.package-card ul {
-  padding-left: 18px;
-  margin-bottom: 16px;
-  color: #333;
+.packages-table tr:nth-child(even) {
+  background: #f9fafb;
 }
 
-.package-card .price {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: var(--secondary-color);
-  margin-bottom: 16px;
+.packages-table tr:hover {
+  background: #fef3c7;
+  transition: background 0.18s;
 }
 
-.package-card button {
+.packages-table td {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.package-table-img {
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.packages-table button {
   background: var(--primary-color);
   color: #fff;
   border: none;
   border-radius: 6px;
-  padding: 10px 22px;
+  padding: 8px 18px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.18s, box-shadow 0.18s;
+  transition: background 0.18s, color 0.18s;
   box-shadow: 0 1px 4px rgba(30,58,138,0.08);
 }
 
-.package-card button:hover {
+.packages-table button:hover {
   background: var(--secondary-color);
   color: var(--primary-color);
 }
 
-.package-img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 14px;
+@media (max-width: 900px) {
+  .packages-table th, .packages-table td {
+    padding: 12px 6px;
+    font-size: 0.97rem;
+  }
+  .package-table-img {
+    width: 60px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 700px) {
+  .packages-table, .packages-table thead, .packages-table tbody, .packages-table th, .packages-table td, .packages-table tr {
+    display: block;
+    width: 100%;
+  }
+  .packages-table thead {
+    display: none;
+  }
+  .packages-table tr {
+    margin-bottom: 18px;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(30,58,138,0.07);
+    background: #fff;
+    padding: 10px 0;
+  }
+  .packages-table td {
+    border: none;
+    position: relative;
+    padding-left: 48%;
+    min-height: 36px;
+    font-size: 1rem;
+  }
+  .packages-table td:before {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    width: 45%;
+    white-space: nowrap;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  .packages-table td:nth-child(1):before { content: "Package Name"; }
+  .packages-table td:nth-child(2):before { content: "Type"; }
+  .packages-table td:nth-child(3):before { content: "Includes"; }
+  .packages-table td:nth-child(4):before { content: "Price"; }
+  .packages-table td:nth-child(5):before { content: ""; }
+}
+
+.lang-switch-btns {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.lang-btn {
+  background: var(--third-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  padding: 8px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+}
+
+.lang-btn.active,
+.lang-btn:hover {
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--secondary-color);
 }
 
 /* =========================
@@ -387,4 +456,712 @@ body {
 .newsletter-form button:hover {
   background: var(--primary-color);
   color: #fff;
+}
+
+/* =========================
+   Park Section Styles
+   ========================= */
+.section-park {
+    margin: 0;
+    font-family: 'Fredoka', cursive;
+    background: #fffdf5;
+    color: #333;
+}
+
+.section-park .park-section {
+    padding: 60px 20px;
+}
+
+.section-park .section-inner {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-park .park-title {
+    font-size: 40px;
+    color: #fff;
+    background: linear-gradient(to right, #a29aff65, #c4faf3ab);
+    padding: 15px 25px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.section-park .park-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+.section-park .park-section:nth-child(odd) {
+    background: #ffe7e0;
+}
+
+.section-park .park-section:nth-child(even) {
+    background: #e0f7f4;
+}
+
+.section-park h3 {
+    color: #f06292;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+.section-park ul {
+    padding-left: 20px;
+}
+
+.section-park li {
+    margin-bottom: 8px;
+}
+
+.section-park .info-box {
+    margin-top: 25px;
+    padding: 20px 25px;
+    border-radius: 15px;
+    background: #fff8dc;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-size: 16px;
+}
+
+.section-park .info-box h4 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #ff5722;
+}
+
+.section-park .info-box.bring {
+    background: #e0f7fa;
+    border-left: 8px solid #00bcd4;
+}
+
+.section-park .info-box.tips {
+    background: #fff9c4;
+    border-left: 8px solid #fdd835;
+}
+
+@media (max-width: 768px) {
+    .section-park .park-title {
+        font-size: 26px;
+    }
+}
+
+/* =========================
+   Ride Section Styles
+   ========================= */
+.section-ride {
+  font-family: 'Fredoka', cursive;
+  /* background: #fffdf5; */
+  color: #333;
+}
+
+.section-ride .rides {
+  padding: 60px 20px;
+}
+
+.section-ride .rides h2 {
+  font-size: 40px;
+  color: #fff;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  padding: 15px 25px;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.section-ride .ride-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-ride .ride-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  width: 300px;
+  overflow: hidden;
+}
+
+.section-ride .ride-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.section-ride .ride-card h3 {
+  color: #f06292;
+  font-size: 20px;
+  margin: 15px;
+}
+
+.section-ride .ride-card p {
+  font-size: 15px;
+  color: #555;
+  margin: 0 15px 15px;
+}
+
+.section-ride footer {
+  background: linear-gradient(to right, #84fab0, #8fd3f4);
+  text-align: center;
+  color: #333;
+  padding: 25px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .section-ride nav ul {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+  }
+
+  .section-ride .rides h2 {
+    font-size: 26px;
+  }
+}
+
+/* =========================
+   Contact Section Styles
+   ========================= */
+.section-contact .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 24px;
+}
+
+.section-contact .contact-form {
+  flex: 1 1 320px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(30,58,138,0.08);
+  padding: 28px 22px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+}
+
+.section-contact .contact-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--primary-color);
+}
+
+.section-contact .contact-form input,
+.section-contact .contact-form textarea {
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #f9fafb;
+  transition: border 0.18s;
+}
+
+.section-contact .contact-form input:focus,
+.section-contact .contact-form textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.section-contact .contact-form button {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.section-contact .contact-form button:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.section-contact .contact-info {
+  flex: 1 1 220px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 28px 22px;
+  box-shadow: 0 2px 8px rgba(30,58,138,0.04);
+  min-width: 220px;
+}
+
+.section-contact .contact-info h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+}
+
+.section-contact .contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section-contact .contact-info li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+@media (max-width: 800px) {
+  .section-contact .contact-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+/* =========================
+   Sidebar Styles
+   ========================= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 240px;
+  height: 100%;
+  background: var(--primary-color, #0c1733);
+  color: #fff;
+  z-index: 2000;
+  transition: left 0.3s;
+  box-shadow: 2px 0 12px rgba(30,58,138,0.10);
+  padding-top: 60px;
+}
+.sidebar.open {
+  left: 0;
+}
+.sidebar .sidebar-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0 0 0 24px;
+  margin: 0;
+}
+.sidebar ul li {
+  margin: 18px 0;
+}
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.18s;
+}
+.sidebar ul li a:hover {
+  color: var(--secondary-color, #fbbf24);
+}
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: 1999;
+}
+.sidebar.open ~ .sidebar-overlay {
+  display: block;
+}
+.sidebar-toggle-btn {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 2100;
+  background: var(--primary-color, #0c1733);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(30,58,138,0.10);
+  transition: background 0.18s;
+}
+.sidebar-toggle-btn:hover {
+  background: var(--secondary-color, #fbbf24);
+  color: var(--primary-color, #0c1733);
+}
+@media (max-width: 700px) {
+  .sidebar {
+    width: 80vw;
+    min-width: 160px;
+  }
+}
+.sidebar-submenu {
+  list-style: none;
+  padding-left: 18px;
+  margin: 6px 0 0 0;
+}
+.sidebar-submenu li {
+  margin: 8px 0; 
+}
+.sidebar-submenu a {
+  font-size: 0.98rem;
+  color: #fbbf24;
+  opacity: 0.85;
+}
+.sidebar-bottom {
+  margin-top: auto;
+  position: static;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 32px;
+}
+.sidebar-bottom-link {
+color: #fff;
+  background: var(--primary-color, #0c1733);
+  border: 1px solid #fbbf24;
+  border-radius: 6px;
+  padding: 8px 24px;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-top: 4px;
+  transition: background 0.18s, color 0.18s;
+}
+.sidebar-bottom-link:hover {
+  background: var(--secondary-color, #fbbf24);
+  color: var(--primary-color, #0c1733);
+}
+
+/* =========================
+   Contact Section Styles_INA
+   ========================= */
+.section-contact .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 24px;
+}
+
+.section-contact .contact-form {
+  flex: 1 1 320px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(30,58,138,0.08);
+  padding: 28px 22px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+}
+
+.section-contact .contact-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--primary-color);
+}
+
+.section-contact .contact-form input,
+.section-contact .contact-form textarea,
+.section-contact .contact-form select {
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #f9fafb;
+  transition: border 0.18s;
+}
+
+.section-contact .contact-form input:focus,
+.section-contact .contact-form textarea:focus
+.section-contact .contact-form select:focus{
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.section-contact .contact-form button {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.section-contact .contact-form button:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.section-contact {
+  flex: 1 1 220px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 28px 22px;
+  box-shadow: 0 2px 8px rgba(30,58,138,0.04);
+  min-width: 220px;
+}
+
+.section-contact h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+}
+
+.section-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section-contact li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.contact-info.enhanced-info {
+  background: #f9fafb;
+  border-left: 6px solid var(--secondary-color);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.contact-info.enhanced-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  color: var(--primary-color);
+}
+
+.contact-info.enhanced-info li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 800px) {
+  .section-contact .contact-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+/* =========================
+   Plan Section Styles
+   ========================= */
+.park-section {
+  padding: 0px 20px;
+  background: var(--third-color);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #333;
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.park-title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  background: var(--gradient-third);
+  padding: 15px 25px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.park-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(30, 58, 138, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+h3 {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 24px;
+}
+
+ul {
+  padding-left: 20px;
+  color: #444;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.info-box {
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: 12px;
+  background: #f9fafb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-size: 1rem;
+  border-left: 6px solid var(--secondary-color);
+}
+
+.info-box h4 {
+  margin-top: 0;
+  font-size: 1.15rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.info-box.bring {
+  background: #e0f7fa;
+  border-left-color: #00bcd4;
+}
+
+.info-box.tips {
+  background: #fff9c4;
+  border-left-color: #fdd835;
+}
+
+@media (max-width: 768px) {
+  .park-title {
+    font-size: 1.6rem;
+  }
+}
+
+.park-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+      gap: 32px;
+    }
+
+.park-section {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(30, 58, 138, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.park-image {
+width: 100%;
+height: auto;
+max-height: 240px;
+object-fit: cover;
+border-radius: 12px;
+margin-bottom: 16px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+@media (max-width: 600px) {
+  .park-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   Ride Section Styles
+   ========================= */
+.rides {
+  padding: 0px 20px;
+  background: var(--third-color);
+}
+
+.rides h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  background: var(--gradient-third);
+  padding: 15px 25px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.ride-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.ride-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(30,58,138,0.08);
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.ride-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(30,58,138,0.13);
+  border-color: var(--secondary-color);
+}
+
+.ride-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.ride-card h3 {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 16px 16px 8px;
+}
+
+.ride-card p {
+  font-size: 1rem;
+  color: #444;
+  margin: 0 16px 20px;
+}
+
+#backToTopBtn {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  z-index: 1000;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#backToTopBtn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#backToTopBtn:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
 }

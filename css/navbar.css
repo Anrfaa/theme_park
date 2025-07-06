@@ -11,6 +11,7 @@
 }
 
 .navbar-left .navbar-logo {
+  padding-left: 30%;
   font-size: 2rem;
   font-weight: bold;
   color: var(--secondary-color);

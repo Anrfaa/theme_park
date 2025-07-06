@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="contact.xsl"?>
+
+<contacts>
+	<contact>
+		<name>Ina Sophia</name>
+		<age>21</age>
+		<email>inasophiaa@gmail.com</email>
+		<phone>011-25771559</phone>
+		<themepark>Sunway Lagoon</themepark>
+		<subject>Ride Information</subject>
+		<visitdate>07/04/2025</visitdate>
+		<satisfaction>9</satisfaction>
+		<referral>Social Media</referral>
+		<message>Are there any height restrictions?</message>
+	</contact>
+
+	<contact>
+		<name>Muhammad Ali</name>
+		<age>30</age>
+		<email>muhammadali30@gmail.com</email>
+		<phone>011-22334455</phone>
+		<themepark>Genting Skyworld</themepark>
+		<subject>Ticket Issue</subject>
+		<visitdate>07/01/2025</visitdate>
+		<satisfaction>7</satisfaction>
+		<referral>Google Search</referral>
+		<message>Tickets did not arrive via email.</message>
+	</contact>
+	  
+	<contact>
+		<name>Aisha Zulkifli</name>
+		<age>27</age>
+		<email>aisha.zul@gmail.com</email>
+		<phone>011-99999888</phone>
+		<themepark>Escape Penang</themepark>
+		<subject>Lost and Found</subject>
+		<visitdate>06/28/2025</visitdate>
+		<satisfaction>8</satisfaction>
+		<referral>Friend/Family</referral>
+		<message>I lost my sunglasses at the water park area.</message>
+	</contact>
+
+	<contact>
+		<name>Lim Wei Hong</name>
+		<age>35</age>
+		<email>limwh@gmail.com</email>
+		<phone>012-55667788</phone>
+		<themepark>Splash Mania</themepark>
+		<subject>Accessibility</subject>
+		<visitdate>06/30/2025</visitdate>
+		<satisfaction>6</satisfaction>
+		<referral>Online Ad</referral>
+		<message>Is there wheelchair access for all major rides?</message>
+	</contact>
+
+	<contact>
+		<name>Siti Aminah</name>
+		<age>19</age>
+		<email>aminah.siti@gmail.com</email>
+		<phone>013-77889900</phone>
+		<themepark>Sunway Lagoon</themepark>
+		<subject>General Feedback</subject>
+		<visitdate>07/30/2025</visitdate>
+		<satisfaction>10</satisfaction>
+		<referral>Social Media</referral>
+		<message>Had an amazing experience! The lifeguards were very helpful.</message>
+	</contact>
+  
+	<contact>
+	  <name>Farah Nadia</name>
+	  <age>22</age>
+	  <email>farah.nadia@yahoo.com</email>
+	  <phone>011-88997766</phone>
+	  <themepark>Sunway Lagoon</themepark>
+	  <subject>Ride Information</subject>
+	  <visitdate>06/15/2025</visitdate>
+	  <satisfaction>8</satisfaction>
+	  <referral>Google Search</referral>
+	  <message>Are lockers available near the water rides?</message>
+	</contact>
+
+	<contact>
+	  <name>Ravi Kumar</name>
+	  <age>28</age>
+	  <email>ravi.kumar@yahoo.com</email>
+	  <phone>012-44556677</phone>
+	  <themepark>Genting Skyworld</themepark>
+	  <subject>General Feedback</subject>
+	  <visitdate>06/20/2025</visitdate>
+	  <satisfaction>9</satisfaction>
+	  <referral>Friend/Family</referral>
+	  <message>Loved the roller coasters and food options!</message>
+	</contact>
+
+	<contact>
+	  <name>Nurul Izzah</name>
+	  <age>24</age>
+	  <email>nurul.izzah@gmail.com</email>
+	  <phone>014-12345678</phone>
+	  <themepark>Escape Penang</themepark>
+	  <subject>Accessibility</subject>
+	  <visitdate>06/25/2025</visitdate>
+	  <satisfaction>7</satisfaction>
+	  <referral>Online Ad</referral>
+	  <message>Need better signage for accessible routes.</message>
+	</contact>
+
+	<contact>
+	  <name>Daniel Wong</name>
+	  <age>32</age>
+	  <email>daniel.wong@gmail.com</email>
+	  <phone>010-66554433</phone>
+	  <themepark>Splash Mania</themepark>
+	  <subject>Lost and Found</subject>
+	  <visitdate>07/02/2025</visitdate>
+	  <satisfaction>5</satisfaction>
+	  <referral>Social Media</referral>
+	  <message>I lost my phone near the wave pool.</message>
+	</contact>
+
+	<contact>
+	  <name>Lisa Tan</name>
+	  <age>26</age>
+	  <email>lisa.tan@example.com</email>
+	  <phone>017-33445566</phone>
+	  <themepark>Sunway Lagoon</themepark>
+	  <subject>Ticket Issue</subject>
+	  <visitdate>07/05/2025</visitdate>
+	  <satisfaction>6</satisfaction>
+	  <referral>Google Search</referral>
+	  <message>I accidentally booked for the wrong date. Can it be changed?</message>
+	</contact>
+
+  <!-- Add more <contact> entries here -->
+</contacts>
+
