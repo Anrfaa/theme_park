@@ -6,6 +6,37 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <button class="sidebar-toggle-btn" id="sidebarToggle" aria-label="Open sidebar">&#9776;</button>
+        <nav class="sidebar" id="sidebar">
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">&times;</button>
+        <ul style="margin-top: 40px;">
+            <li><a href="index.html">🏠 Home</a></li>
+            <li>
+            <a href="ride.html">🎢 Rides</a>
+            <ul class="sidebar-submenu">
+                <li><a href="ride.html#category1">Category 1</a></li>
+                <li><a href="ride.html#category2">Category 2</a></li>
+                <li><a href="ride.html#category3">Category 3</a></li>
+            </ul>
+            </li>
+            <li>
+            <a href="packages.html">🎟 Packages</a>
+            <ul class="sidebar-submenu">
+                <li><a href="packages.html#offer1">Offer 1</a></li>
+                <li><a href="packages.html#offer2">Offer 2</a></li>
+            </ul>
+            </li>
+            <li><a href="plan_your_visit.html">🗺 Plan Your Visit</a></li>
+            <li><a href="#book.html">🎫 Book Your Tickets</a></li>
+            <li><a href="contact.html">📞 Contact & Support</a></li>
+        </ul>
+        <div class="sidebar-bottom">
+            <a href="#login.html" class="sidebar-bottom-link">Log In</a>
+            <a href="#register.html" class="sidebar-bottom-link">Create Account</a>
+        </div>
+        </nav>
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
         <iframe src="components/navbar.html" class="navbar-frame" title="Navigation Bar"></iframe>
         <!-- make sure the class name will be like section-part name to prevent any compile issues-->
         <!-- your content is here and !section-container! is required -->
@@ -13,5 +44,30 @@
             <!-- content here -->
         </main>
         <iframe src="components/footer.html" class="footer-frame" title="Footer"></iframe>
+        <script>
+            // Sidebar open/close logic
+            const sidebar = document.getElementById('sidebar');
+            const sidebarToggle = document.getElementById('sidebarToggle');
+            const sidebarClose = document.getElementById('sidebarClose');
+            const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+            function openSidebar() {
+                sidebar.classList.add('open');
+                sidebarOverlay.style.display = 'block';
+            }
+            function closeSidebar() {
+                sidebar.classList.remove('open');
+                sidebarOverlay.style.display = 'none';
+            }
+
+            sidebarToggle.addEventListener('click', openSidebar);
+            sidebarClose.addEventListener('click', closeSidebar);
+            sidebarOverlay.addEventListener('click', closeSidebar);
+
+            // Optional: Close sidebar with ESC key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === "Escape") closeSidebar();
+            });
+        </script>
     </body>
 </html>
