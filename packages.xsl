@@ -10,6 +10,8 @@
   </head>
   <body>
     <h1>Theme Park Packages</h1>
+
+    <!-- Family Packages Table -->
     <h2>Family Packages</h2>
     <table border="1" class="packages-table">
       <tr>
@@ -20,6 +22,68 @@
         <th></th>
       </tr>
       <xsl:for-each select="packages/package[type='Family']">
+        <tr>
+          <td>
+            <img>
+              <xsl:attribute name="src"><xsl:value-of select="image"/></xsl:attribute>
+              <xsl:attribute name="alt"><xsl:value-of select="name"/></xsl:attribute>
+              <xsl:attribute name="class">package-table-img</xsl:attribute>
+            </img>
+          </td>
+          <td><xsl:value-of select="name"/></td>
+          <td>
+            <xsl:call-template name="split-includes">
+              <xsl:with-param name="inc" select="includes"/>
+            </xsl:call-template>
+          </td>
+          <td>$<xsl:value-of select="price"/></td>
+          <td><button>Book Now</button></td>
+        </tr>
+      </xsl:for-each>
+    </table>
+
+    <!-- Individu Packages Table -->
+    <h2>Individu Packages</h2>
+    <table border="1" class="packages-table">
+      <tr>
+        <th>Image</th>
+        <th>Package Name</th>
+        <th>Includes</th>
+        <th>Price</th>
+        <th></th>
+      </tr>
+      <xsl:for-each select="packages/package[type='Individu']">
+        <tr>
+          <td>
+            <img>
+              <xsl:attribute name="src"><xsl:value-of select="image"/></xsl:attribute>
+              <xsl:attribute name="alt"><xsl:value-of select="name"/></xsl:attribute>
+              <xsl:attribute name="class">package-table-img</xsl:attribute>
+            </img>
+          </td>
+          <td><xsl:value-of select="name"/></td>
+          <td>
+            <xsl:call-template name="split-includes">
+              <xsl:with-param name="inc" select="includes"/>
+            </xsl:call-template>
+          </td>
+          <td>$<xsl:value-of select="price"/></td>
+          <td><button>Book Now</button></td>
+        </tr>
+      </xsl:for-each>
+    </table>
+
+    <!-- Season Packages Table -->
+    <h2>Season Packages</h2>
+    <table border="1" class="packages-table">
+      <tr>
+        <th>Image</th>
+        <th>Package Name</th>
+        <th>Includes</th>
+        <th>Price</th>
+        <th></th>
+      </tr>
+      <xsl:for-each select="packages/package[type='Season']">
         <tr>
           <td>
             <img>
