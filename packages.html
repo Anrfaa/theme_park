@@ -7,6 +7,37 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <button class="sidebar-toggle-btn" id="sidebarToggle" aria-label="Open sidebar">&#9776;</button>
+    <nav class="sidebar" id="sidebar">
+    <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">&times;</button>
+    <ul style="margin-top: 40px;">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li>
+        <a href="ride.html">🎢 Rides</a>
+        <ul class="sidebar-submenu">
+            <li><a href="ride.html#category1">Category 1</a></li>
+            <li><a href="ride.html#category2">Category 2</a></li>
+            <li><a href="ride.html#category3">Category 3</a></li>
+        </ul>
+        </li>
+        <li>
+        <a href="packages.html">🎟 Packages</a>
+        <ul class="sidebar-submenu">
+            <li><a href="packages.html#offer1">Offer 1</a></li>
+            <li><a href="packages.html#offer2">Offer 2</a></li>
+        </ul>
+        </li>
+        <li><a href="plan_your_visit.html">🗺 Plan Your Visit</a></li>
+        <li><a href="#book.html">🎫 Book Your Tickets</a></li>
+        <li><a href="contact.html">📞 Contact & Support</a></li>
+    </ul>
+    <div class="sidebar-bottom">
+        <a href="#login.html" class="sidebar-bottom-link">Log In</a>
+        <a href="#register.html" class="sidebar-bottom-link">Create Account</a>
+    </div>
+    </nav>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
     <iframe src="components/navbar.html" class="navbar-frame" title="Navigation Bar"></iframe>
 
     <!-- Global header section -->
@@ -20,105 +51,217 @@
     
     <main>
         <section class="section-container scrollable-section">
-            <div class="packages-list">
-                <!-- Family Packages -->
-                <h3 class="package-group-title">Family Packages</h3>
-                <div class="package-card">
-                    <h4>Family Fun Pack</h4>
-                    <ul>
-                        <li>4 Entry Tickets</li>
-                        <li>Free Lunch Vouchers</li>
-                        <li>Photo Pass</li>
-                        <li>Fast Track Access</li>
-                    </ul>
-                    <p class="price">$120</p>
-                    <button>Book Now</button>
-                </div>
-                <div class="package-card">
-                    <h4>Kids' Day Out</h4>
-                    <ul>
-                        <li>1 Child Entry</li>
-                        <li>Snack Pack</li>
-                        <li>Meet & Greet with Mascots</li>
-                        <li>Free Toy</li>
-                    </ul>
-                    <p class="price">$35</p>
-                    <button>Book Now</button>
-                </div>
-
-                <!-- Individu Packages -->
-                <h3 class="package-group-title">Individu Packages</h3>
-                <div class="package-card">
-                    <h4>Adventure Seeker</h4>
-                    <ul>
-                        <li>Unlimited Rides</li>
-                        <li>1 Meal Included</li>
-                        <li>Souvenir Gift</li>
-                        <li>Priority Entry</li>
-                    </ul>
-                    <p class="price">$80</p>
-                    <button>Book Now</button>
-                </div>
-                <div class="package-card">
-                    <h4>Solo Explorer</h4>
-                    <ul>
-                        <li>1 Entry Ticket</li>
-                        <li>Snack Voucher</li>
-                        <li>Photo Pass</li>
-                    </ul>
-                    <p class="price">$40</p>
-                    <button>Book Now</button>
-                </div>
-                <div class="package-card">
-                    <h4>Couple's Escape</h4>
-                    <ul>
-                        <li>2 Entry Tickets</li>
-                        <li>Dinner for Two</li>
-                        <li>VIP Lounge Access</li>
-                        <li>Complimentary Photos</li>
-                    </ul>
-                    <p class="price">$95</p>
-                    <button>Book Now</button>
-                </div>
-
-                <!-- Seasons Packages -->
-                <h3 class="package-group-title">Seasons Packages</h3>
-                <div class="package-card">
-                    <h4>Summer Splash</h4>
-                    <ul>
-                        <li>Entry Ticket</li>
-                        <li>Water Park Access</li>
-                        <li>Free Ice Cream</li>
-                        <li>Souvenir Towel</li>
-                    </ul>
-                    <p class="price">$60</p>
-                    <button>Book Now</button>
-                </div>
-                <div class="package-card">
-                    <h4>Winter Wonderland</h4>
-                    <ul>
-                        <li>Entry Ticket</li>
-                        <li>Hot Chocolate Voucher</li>
-                        <li>Snow Show Access</li>
-                        <li>Photo with Santa</li>
-                    </ul>
-                    <p class="price">$65</p>
-                    <button>Book Now</button>
-                </div>
-                <div class="package-card">
-                    <h4>Spring Bloom</h4>
-                    <ul>
-                        <li>Entry Ticket</li>
-                        <li>Flower Garden Tour</li>
-                        <li>Picnic Set</li>
-                        <li>Photo Pass</li>
-                    </ul>
-                    <p class="price">$55</p>
-                    <button>Book Now</button>
-                </div>
+            <!-- Language Switch Buttons -->
+            <div class="lang-switch-btns">
+                <button class="lang-btn active">English</button>
+                <button class="lang-btn">Bahasa</button>
             </div>
+            
+            <h2 class="packages-table-title">Family Packages</h2>
+            <table class="packages-table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Package Name</th>
+                        <th>Includes</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="img/global-header.jpg" alt="Family Fun Pack" class="package-table-img">
+                        </td>
+                        <td>
+                            Family Fun Pack
+                        </td>
+                        <td>
+                            4 Entry Tickets<br>
+                            Free Lunch Vouchers<br>
+                            Photo Pass<br>
+                            Fast Track Access
+                        </td>
+                        <td>$120</td>
+                        <td><button>Book Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/global-header.jpg" alt="Kids' Day Out" class="package-table-img">
+                        </td>
+                        <td>
+                            Kids' Day Out
+                        </td>
+                        <td>
+                            1 Child Entry<br>
+                            Snack Pack<br>
+                            Meet & Greet with Mascots<br>
+                            Free Toy
+                        </td>
+                        <td>$35</td>
+                        <td><button>Book Now</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 class="packages-table-title">Individu Packages</h2>
+            <table class="packages-table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Package Name</th>
+                        <th>Includes</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="img/global-header.jpg" alt="Adventure Seeker" class="package-table-img">
+                        </td>
+                        <td>
+                            Adventure Seeker
+                        </td>
+                        <td>
+                            Unlimited Rides<br>
+                            1 Meal Included<br>
+                            Souvenir Gift<br>
+                            Priority Entry
+                        </td>
+                        <td>$80</td>
+                        <td><button>Book Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/global-header.jpg" alt="Solo Explorer" class="package-table-img">
+                        </td>
+                        <td>
+                            Solo Explorer
+                        </td>
+                        <td>
+                            1 Entry Ticket<br>
+                            Snack Voucher<br>
+                            Photo Pass
+                        </td>
+                        <td>$40</td>
+                        <td><button>Book Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/global-header.jpg" alt="Couple's Escape" class="package-table-img">
+                        </td>
+                        <td>
+                            Couple's Escape
+                        </td>
+                        <td>
+                            2 Entry Tickets<br>
+                            Dinner for Two<br>
+                            VIP Lounge Access<br>
+                            Complimentary Photos
+                        </td>
+                        <td>$95</td>
+                        <td><button>Book Now</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 class="packages-table-title">Season Packages</h2>
+            <table class="packages-table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Package Name</th>
+                        <th>Includes</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="img/global-header.jpg" alt="Summer Splash" class="package-table-img">
+                        </td>
+                        <td>
+                            Summer Splash
+                        </td>
+                        <td>
+                            Entry Ticket<br>
+                            Water Park Access<br>
+                            Free Ice Cream<br>
+                            Souvenir Towel
+                        </td>
+                        <td>$60</td>
+                        <td><button>Book Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/global-header.jpg" alt="Winter Wonderland" class="package-table-img">
+                        </td>
+                        <td>
+                            Winter Wonderland
+                        </td>
+                        <td>
+                            Entry Ticket<br>
+                            Hot Chocolate Voucher<br>
+                            Snow Show Access<br>
+                            Photo with Santa
+                        </td>
+                        <td>$65</td>
+                        <td><button>Book Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/global-header.jpg" alt="Spring Bloom" class="package-table-img">
+                        </td>
+                        <td>
+                            Spring Bloom
+                        </td>
+                        <td>
+                            Entry Ticket<br>
+                            Flower Garden Tour<br>
+                            Picnic Set<br>
+                            Photo Pass
+                        </td>
+                        <td>$55</td>
+                        <td><button>Book Now</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 class="packages-table-title">View Packages Table (XML/XSLT)</h2>
+            <p>
+                The table below is generated from <code>packages.xml</code> using <code>packages.xsl</code>.<br>
+                <a href="packages.xml" target="_blank">Open XML Table in New Tab</a>
+            </p>
+            <iframe src="packages.xml" width="100%" height="500" style="border:1px solid #ccc;"></iframe>
         </section>
     </main>
     <iframe src="components/footer.html" class="footer-frame" title="Footer"></iframe>
+    <script>
+        // Sidebar open/close logic
+        const sidebar = document.getElementById('sidebar');
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebarClose = document.getElementById('sidebarClose');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+        function openSidebar() {
+            sidebar.classList.add('open');
+            sidebarOverlay.style.display = 'block';
+        }
+        function closeSidebar() {
+            sidebar.classList.remove('open');
+            sidebarOverlay.style.display = 'none';
+        }
+
+        sidebarToggle.addEventListener('click', openSidebar);
+        sidebarClose.addEventListener('click', closeSidebar);
+        sidebarOverlay.addEventListener('click', closeSidebar);
+
+        // Optional: Close sidebar with ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") closeSidebar();
+        });
+    </script>
 </body>
 </html>

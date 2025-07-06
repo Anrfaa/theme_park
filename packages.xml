@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="packages.xsl"?>
+<packages>
+    <!-- Family Packages -->
+    <package>
+        <type>Family</type>
+        <name>Family Fun Pack</name>
+        <includes>4 Entry Tickets,Free Lunch Vouchers,Photo Pass,Fast Track Access</includes>
+        <price>120</price>
+        <image>img/global-header.jpg</image>
+    </package>
+    <package>
+        <type>Family</type>
+        <name>Kids' Day Out</name>
+        <includes>1 Child Entry,Snack Pack,Meet &amp; Greet with Mascots,Free Toy</includes>
+        <price>35</price>
+        <image>img/global-header.jpg</image>
+    </package>
+
+    <!-- Individu Packages -->
+    <package>
+        <type>Individu</type>
+        <name>Adventure Seeker</name>
+        <includes>Unlimited Rides,1 Meal Included,Souvenir Gift,Priority Entry</includes>
+        <price>80</price>
+        <image>img/global-header.jpg</image>
+    </package>
+    <package>
+        <type>Individu</type>
+        <name>Solo Explorer</name>
+        <includes>1 Entry Ticket,Snack Voucher,Photo Pass</includes>
+        <price>40</price>
+        <image>img/global-header.jpg</image>
+    </package>
+    <package>
+        <type>Individu</type>
+        <name>Couple's Escape</name>
+        <includes>2 Entry Tickets,Dinner for Two,VIP Lounge Access,Complimentary Photos</includes>
+        <price>95</price>
+        <image>img/global-header.jpg</image>
+    </package>
+
+    <!-- Season Packages -->
+    <package>
+        <type>Season</type>
+        <name>Summer Splash</name>
+        <includes>Entry Ticket,Water Park Access,Free Ice Cream,Souvenir Towel</includes>
+        <price>60</price>
+        <image>img/global-header.jpg</image>
+    </package>
+    <package>
+        <type>Season</type>
+        <name>Winter Wonderland</name>
+        <includes>Entry Ticket,Hot Chocolate Voucher,Snow Show Access,Photo with Santa</includes>
+        <price>65</price>
+        <image>img/global-header.jpg</image>
+    </package>
+    <package>
+        <type>Season</type>
+        <name>Spring Bloom</name>
+        <includes>Entry Ticket,Flower Garden Tour,Picnic Set,Photo Pass</includes>
+        <price>55</price>
+        <image>img/global-header.jpg</image>
+    </package>
+</packages>
