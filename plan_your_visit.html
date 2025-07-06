@@ -7,187 +7,216 @@
     </head>
     <body>
       <button class="sidebar-toggle-btn" id="sidebarToggle" aria-label="Open sidebar">&#9776;</button>
-    <nav class="sidebar" id="sidebar">
-    <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">&times;</button>
-    <ul style="margin-top: 40px;">
-        <li><a href="index.html">🏠 Home</a></li>
-        <li>
-        <a href="ride.html">🎢 Rides</a>
-        <ul class="sidebar-submenu">
-            <li><a href="ride.html#category1">Category 1</a></li>
-            <li><a href="ride.html#category2">Category 2</a></li>
-            <li><a href="ride.html#category3">Category 3</a></li>
+        <nav class="sidebar" id="sidebar">
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">&times;</button>
+        <ul style="margin-top: 40px;">
+            <li><a href="index.html">🏠 Home</a></li>
+            <li>
+            <a href="ride.html">🎢 Rides</a>
+            <ul class="sidebar-submenu">
+                <li><a href="ride.html#category1">Category 1</a></li>
+                <li><a href="ride.html#category2">Category 2</a></li>
+                <li><a href="ride.html#category3">Category 3</a></li>
+            </ul>
+            </li>
+            <li>
+            <a href="packages.html">🎟 Packages</a>
+            <ul class="sidebar-submenu">
+                <li><a href="packages.html#offer1">Offer 1</a></li>
+                <li><a href="packages.html#offer2">Offer 2</a></li>
+            </ul>
+            </li>
+            <li><a href="plan_your_visit.html">🗺 Plan Your Visit</a></li>
+            <li><a href="#book.html">🎫 Book Your Tickets</a></li>
+            <li><a href="contact.html">📞 Contact & Support</a></li>
         </ul>
-        </li>
-        <li>
-        <a href="packages.html">🎟 Packages</a>
-        <ul class="sidebar-submenu">
-            <li><a href="packages.html#offer1">Offer 1</a></li>
-            <li><a href="packages.html#offer2">Offer 2</a></li>
-        </ul>
-        </li>
-        <li><a href="plan_your_visit.html">🗺 Plan Your Visit</a></li>
-        <li><a href="#book.html">🎫 Book Your Tickets</a></li>
-        <li><a href="contact.html">📞 Contact & Support</a></li>
-    </ul>
-    <div class="sidebar-bottom">
-        <a href="#login.html" class="sidebar-bottom-link">Log In</a>
-        <a href="#register.html" class="sidebar-bottom-link">Create Account</a>
-    </div>
-    </nav>
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <div class="sidebar-bottom">
+            <a href="#login.html" class="sidebar-bottom-link">Log In</a>
+            <a href="#register.html" class="sidebar-bottom-link">Create Account</a>
+        </div>
+        </nav>
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
         <iframe src="components/navbar.html" class="navbar-frame" title="Navigation Bar"></iframe>
 
         <!-- Global header section -->
-        <div class="global-header">
-            <div class="global-header-bg"></div>
-            <div class="global-header-content">
-                <h1 class="global-header-title">Plan Your Visit</h1>
-                <p class="global-header-desc">Discover Malaysia’s top theme parks, ticket info, and tips to make your visit unforgettable!</p>
-            </div>
-        </div>
+		<div class="global-header">
+			<div class="global-header-bg"></div>
+			<div class="global-header-content">
+				<h1 class="global-header-title">Plan Your Visit</h1>
+				<p class="global-header-desc">Get ready for an unforgettable adventure at our theme park!</p>
+			</div>
+		</div>
 
-        <main class="section-park">
-            <section class="park-section">
-              <div class="section-inner">
-                <h2 class="park-title">🌊 SPLASHMANIA</h2>
-                <div class="park-content">
-                  <p>SplashMania at Gamuda Cove is a splash-tastic water paradise with over 39 attractions including slides, wave pools, and lazy rivers.</p>
-                  <h3>Opening Hours</h3>
-                  <ul><li>10:00 AM – 6:00 PM (Closed Wednesdays)</li></ul>
-                  <h3>Tickets</h3>
-                  <ul><li>RM63 (Adult), RM50 (Child/Senior), RM95 (Non-MyKad)</li></ul>
-                  <h3>Attractions</h3>
-                  <ul>
-                    <li>Shaka Waka LED Slide</li>
-                    <li>Monsoon River</li>
-                    <li>Little Splash Kids Zone</li>
-                  </ul>
-                  <div class="info-box bring">
-                    <h4>🧳 What to Bring</h4>
-                    <ul>
-                      <li>Swimsuit, towel</li>
-                      <li>Sunblock, waterproof pouch</li>
-                      <li>Flip-flops or aqua shoes</li>
-                    </ul>
-                  </div>
-                  <div class="info-box tips">
-                  <h4>💡 Tips for Visitors</h4>
-                    <ul>
-                      <li>Come early to enjoy all slides</li>
-                      <li>Book tickets online for promo</li>
-                      <li>Rent cabanas for privacy</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </section>
+        <main class="section-container">
+			<div class="park-grid">
+			  <!-- SPLASH MANIA -->
+			  <section class="park-section">
+				<div class="section-inner">
+				  <h2 class="park-title">
+				  <a href="https://gamudacove.com.my/splashmania/" target="_blank">SPLASH MANIA</a>
+				  </h2>
+				  <div class="park-content">
+					<img src="https://i.ytimg.com/vi/ZeaFAtNu7Us/maxresdefault.jpg" alt="Splash Mania" class="park-image">
+					<p>SplashMania at Gamuda Cove is a splash-tastic water paradise with over 39 attractions including slides, wave pools, and lazy rivers.</p>
+					<h3>Opening Hours</h3>
+					<ul><li>10:00 AM – 6:00 PM (Closed Wednesdays)</li></ul>
+					<h3>Tickets</h3>
+					<ul><li>RM63 (Adult), RM50 (Child/Senior), RM95 (Non-MyKad)</li></ul>
+					<h3>Attractions</h3>
+					<ul>
+					  <li>Shaka Waka LED Slide</li>
+					  <li>Monsoon River</li>
+					  <li>Little Splash Kids Zone</li>
+					</ul>
+					<div class="info-box bring">
+					  <h4>🧳 What to Bring</h4>
+					  <ul>
+						<li>Swimsuit, towel</li>
+						<li>Sunblock, waterproof pouch</li>
+						<li>Flip-flops or aqua shoes</li>
+					  </ul>
+					</div>
+					<div class="info-box tips">
+					  <h4>💡 Tips for Visitors</h4>
+					  <ul>
+						<li>Come early to enjoy all slides</li>
+						<li>Book tickets online for promo</li>
+						<li>Rent cabanas for privacy</li>
+					  </ul>
+					</div>
+				  </div>
+				</div>
+			  </section>
 
-            <section class="park-section">
-              <div class="section-inner">
-                <h2 class="park-title">🌴 ESCAPE PENANG</h2>
-                <div class="park-content">
-                  <p>ESCAPE is a nature-based adventure park in Penang, featuring world-record slides and family-friendly outdoor fun!</p>
-                  <h3>Opening Hours</h3>
-                  <ul><li>10:00 AM – 6:00 PM (Closed Mondays)</li></ul>
-                  <h3>Tickets</h3>
-                  <ul><li>RM69–RM145 depending on age/group</li></ul>
-                  <h3>Attractions</h3>
-                  <ul>
-                    <li>World’s Longest Tube Slide</li>
-                    <li>Flying Lemur Zipline</li>
-                    <li>Obstacle Courses & Waterplay</li>
-                  </ul>
-                  <div class="info-box bring">
-                    <h4>🧳 What to Bring</h4>
-                    <ul>
-                      <li>Comfortable sportswear</li>
-                      <li>Gloves, water bottle, sunscreen</li>
-                      <li>Extra clothes & towel</li>
-                    </ul>
-                  </div>
-                  <div class="info-box tips">
-                    <h4>💡 Tips for Visitors</h4>
-                    <ul>
-                      <li>Plan ahead — dry & wet zones!</li>
-                      <li>Go on weekdays to avoid queue</li>
-                      <li>Locker rental available</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </section>
+			  <!-- ESCAPE PENANG -->
+			  <section class="park-section">
+				<div class="section-inner">
+				  <h2 class="park-title">ESCAPE PENANG</h2>
+				  <div class="park-content">
+				  <img src="https://livelifelah.com/wp-content/uploads/2020/01/img_20191224_113442_1-01-912x684-1.jpeg" alt="Escape Penang" class="park-image">
+					<p>ESCAPE is a nature-based adventure park in Penang, featuring world-record slides and family-friendly outdoor fun!</p>
+					<h3>Opening Hours</h3>
+					<ul><li>10:00 AM – 6:00 PM (Closed Mondays)</li></ul>
+					<h3>Tickets</h3>
+					<ul><li>RM69–RM145 depending on age/group</li></ul>
+					<h3>Attractions</h3>
+					<ul>
+					  <li>World’s Longest Tube Slide</li>
+					  <li>Flying Lemur Zipline</li>
+					  <li>Obstacle Courses & Waterplay</li>
+					</ul>
+					<div class="info-box bring">
+					  <h4>🧳 What to Bring</h4>
+					  <ul>
+						<li>Comfortable sportswear</li>
+						<li>Gloves, water bottle, sunscreen</li>
+						<li>Extra clothes & towel</li>
+					  </ul>
+					</div>
+					<div class="info-box tips">
+					  <h4>💡 Tips for Visitors</h4>
+					  <ul>
+						<li>Plan ahead — dry & wet zones!</li>
+						<li>Go on weekdays to avoid queue</li>
+						<li>Locker rental available</li>
+					  </ul>
+					</div>
+				  </div>
+				</div>
+			  </section>
 
-            <section class="park-section">
-              <div class="section-inner">
-                <h2 class="park-title">🎢 SUNWAY LAGOON</h2>
-                <div class="park-content">
-                  <p>Malaysia’s ultimate theme park with 6 zones of non-stop action: water, wildlife, horror, extreme, and more!</p>
-                  <h3>Opening Hours</h3>
-                  <ul><li>10:00 AM – 6:00 PM (Daily)</li></ul>
-                  <h3>Tickets</h3>
-                  <ul><li>RM120 (Adult), RM100 (Child/Senior)</li></ul>
-                  <h3>Attractions</h3>
-                  <ul>
-                    <li>Nickelodeon Lost Lagoon</li>
-                    <li>Extreme Park & Scream Zone</li>
-                    <li>Wave Pool & Wildlife Zoo</li>
-                  </ul>
-                  <div class="info-box bring">
-                    <h4>🧳 What to Bring</h4>
-                    <ul>
-                      <li>Swimwear, towel, waterproof bag</li>
-                      <li>Hat or cap, reusable water bottle</li>
-                    </ul>
-                  </div>
-                  <div class="info-box tips">
-                    <h4>💡 Tips for Visitors</h4>
-                    <ul>
-                      <li>Use cashless band for convenience</li>
-                      <li>Arrive early for animal shows</li>
-                      <li>Plan zones based on map</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </section>
+			  <!-- SUNWAY LAGOON -->
+			  <section class="park-section">
+				<div class="section-inner">
+				  <h2 class="park-title">SUNWAY LAGOON</h2>
+				  <div class="park-content">
+				  <img src="https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit19201280gsm/events/2024/10/29/bccd75f0-d3e7-4629-aad3-d2843022efec-1730173876684-2896664d0342d416e23abee0df3598ea.jpg" alt="Sunway Lagoon" class="park-image">
+					<p>Malaysia’s ultimate theme park with 6 zones of non-stop action: water, wildlife, horror, extreme, and more!</p>
+					<h3>Opening Hours</h3>
+					<ul><li>10:00 AM – 6:00 PM (Daily)</li></ul>
+					<h3>Tickets</h3>
+					<ul><li>RM120 (Adult), RM100 (Child/Senior)</li></ul>
+					<h3>Attractions</h3>
+					<ul>
+					  <li>Nickelodeon Lost Lagoon</li>
+					  <li>Extreme Park & Scream Zone</li>
+					  <li>Wave Pool & Wildlife Zoo</li>
+					</ul>
+					<div class="info-box bring">
+					  <h4>🧳 What to Bring</h4>
+					  <ul>
+						<li>Swimwear, towel, waterproof bag</li>
+						<li>Hat or cap, reusable water bottle</li>
+					  </ul>
+					</div>
+					<div class="info-box tips">
+					  <h4>💡 Tips for Visitors</h4>
+					  <ul>
+						<li>Use cashless band for convenience</li>
+						<li>Arrive early for animal shows</li>
+						<li>Plan zones based on map</li>
+					  </ul>
+					</div>
+				  </div>
+				</div>
+			  </section>
 
-            <section class="park-section">
-              <div class="section-inner">
-                <h2 class="park-title">🎠 GENTING SKYWORLDS</h2>
-                <div class="park-content">
-                  <p>A cool outdoor park in the clouds! Genting SkyWorlds features 9 movie-themed worlds with cutting-edge rides and photo ops.</p>
-                  <h3>Opening Hours</h3>
-                  <ul><li>11:00 AM – 6:00 PM (Daily)</li></ul>
-                  <h3>Tickets</h3>
-                  <ul><li>RM151 (Adult), RM128 (Child/Senior)</li></ul>
-                  <h3>Attractions</h3>
-                  <ul>
-                    <li>Independence Day: Defiance</li>
-                    <li>Epic Voyage to Moon Base</li>
-                    <li>Ice Age World & Liberty Lane</li>
-                  </ul>
-                  <div class="info-box bring">
-                    <h4>🧳 What to Bring</h4>
-                    <ul>
-                      <li>Jacket, sneakers, umbrella</li>
-                      <li>Power bank, snacks</li>
-                    </ul>
-                  </div>
-                  <div class="info-box tips">
-                    <h4>💡 Tips for Visitors</h4>
-                    <ul>
-                      <li>Use the Genting app to skip lines</li>
-                      <li>Foggy? Use handrails on stairs</li>
-                      <li>Check for fireworks in the evening!</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </section>
+			  <!-- GENTING SKYWORLDS -->
+			  <section class="park-section">
+				<div class="section-inner">
+				  <h2 class="park-title">GENTING SKYWORLDS</h2>
+				  <div class="park-content">
+				  <img src="https://i.ytimg.com/vi/mboifAYPDSA/maxresdefault.jpg" alt="Genting Skyworlds" class="park-image">
+					<p>A cool outdoor park in the clouds! Genting SkyWorlds features 9 movie-themed worlds with cutting-edge rides and photo ops.</p>
+					<h3>Opening Hours</h3>
+					<ul><li>11:00 AM – 6:00 PM (Daily)</li></ul>
+					<h3>Tickets</h3>
+					<ul><li>RM151 (Adult), RM128 (Child/Senior)</li></ul>
+					<h3>Attractions</h3>
+					<ul>
+					  <li>Independence Day: Defiance</li>
+					  <li>Epic Voyage to Moon Base</li>
+					  <li>Ice Age World & Liberty Lane</li>
+					</ul>
+					<div class="info-box bring">
+					  <h4>🧳 What to Bring</h4>
+					  <ul>
+						<li>Jacket, sneakers, umbrella</li>
+						<li>Power bank, snacks</li>
+					  </ul>
+					</div>
+					<div class="info-box tips">
+					  <h4>💡 Tips for Visitors</h4>
+					  <ul>
+						<li>Use the Genting app to skip lines</li>
+						<li>Foggy? Use handrails on stairs</li>
+						<li>Check for fireworks in the evening!</li>
+					  </ul>
+					</div>
+				  </div>
+				</div>
+			  </section>
+			</div>
+			
+			<button onclick="scrollToTop()" id="backToTopBtn" title="Back to Top">⬆️</button>
+			<script>
+			  // Show button on scroll
+			  window.onscroll = function () {
+				const btn = document.getElementById("backToTopBtn");
+				if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+				  btn.classList.add("show");
+				} else {
+				  btn.classList.remove("show");
+				}
+			  };
+
+			  // Scroll to top
+			  function scrollToTop() {
+				window.scrollTo({ top: 0, behavior: 'smooth' });
+			  }
+			</script>
         </main>
-        
         <iframe src="components/footer.html" class="footer-frame" title="Footer"></iframe>
         <script>
             // Sidebar open/close logic
