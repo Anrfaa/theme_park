@@ -9,32 +9,32 @@
 <body>
     <button class="sidebar-toggle-btn" id="sidebarToggle" aria-label="Open sidebar">&#9776;</button>
     <nav class="sidebar" id="sidebar">
-    <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">&times;</button>
-    <ul style="margin-top: 40px;">
-        <li><a href="index.html">🏠 Home</a></li>
-        <li>
-        <a href="ride.html">🎢 Rides</a>
-        <ul class="sidebar-submenu">
-            <li><a href="ride.html#category1">Category 1</a></li>
-            <li><a href="ride.html#category2">Category 2</a></li>
-            <li><a href="ride.html#category3">Category 3</a></li>
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">&times;</button>
+        <ul style="margin-top: 40px;">
+            <li><a href="index.html">🏠 Home</a></li>
+            <li>
+                <a href="ride.html">🎢 Rides</a>
+                <ul class="sidebar-submenu">
+                    <li><a href="ride.html#category1">Category 1</a></li>
+                    <li><a href="ride.html#category2">Category 2</a></li>
+                    <li><a href="ride.html#category3">Category 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="packages.html">🎟 Packages</a>
+                <ul class="sidebar-submenu">
+                    <li><a href="packages.html#offer1">Offer 1</a></li>
+                    <li><a href="packages.html#offer2">Offer 2</a></li>
+                </ul>
+            </li>
+            <li><a href="plan_your_visit.html">🗺 Plan Your Visit</a></li>
+            <li><a href="#book.html">🎫 Book Your Tickets</a></li>
+            <li><a href="contact.html">📞 Contact & Support</a></li>
         </ul>
-        </li>
-        <li>
-        <a href="packages.html">🎟 Packages</a>
-        <ul class="sidebar-submenu">
-            <li><a href="packages.html#offer1">Offer 1</a></li>
-            <li><a href="packages.html#offer2">Offer 2</a></li>
-        </ul>
-        </li>
-        <li><a href="plan_your_visit.html">🗺 Plan Your Visit</a></li>
-        <li><a href="#book.html">🎫 Book Your Tickets</a></li>
-        <li><a href="contact.html">📞 Contact & Support</a></li>
-    </ul>
-    <div class="sidebar-bottom">
-        <a href="#login.html" class="sidebar-bottom-link">Log In</a>
-        <a href="#register.html" class="sidebar-bottom-link">Create Account</a>
-    </div>
+        <div class="sidebar-bottom">
+            <a href="#login.html" class="sidebar-bottom-link">Log In</a>
+            <a href="#register.html" class="sidebar-bottom-link">Create Account</a>
+        </div>
     </nav>
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
@@ -53,181 +53,217 @@
         <section class="section-container scrollable-section">
             <!-- Language Switch Buttons -->
             <div class="lang-switch-btns">
-                <button class="lang-btn active">English</button>
-                <button class="lang-btn">Bahasa</button>
+                <button class="lang-btn active" data-lang="en">English</button>
+                <button class="lang-btn" data-lang="ms">Bahasa</button>
             </div>
             
-            <h2 class="packages-table-title">Family Packages</h2>
-            <table class="packages-table">
-                <thead>
-                    <tr>
-                        <th>Image</th>
-                        <th>Package Name</th>
-                        <th>Includes</th>
-                        <th>Price</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <img src="img/global-header.jpg" alt="Family Fun Pack" class="package-table-img">
-                        </td>
-                        <td>
-                            Family Fun Pack
-                        </td>
-                        <td>
-                            4 Entry Tickets<br>
-                            Free Lunch Vouchers<br>
-                            Photo Pass<br>
-                            Fast Track Access
-                        </td>
-                        <td>$120</td>
-                        <td><button>Book Now</button></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="img/global-header.jpg" alt="Kids' Day Out" class="package-table-img">
-                        </td>
-                        <td>
-                            Kids' Day Out
-                        </td>
-                        <td>
-                            1 Child Entry<br>
-                            Snack Pack<br>
-                            Meet & Greet with Mascots<br>
-                            Free Toy
-                        </td>
-                        <td>$35</td>
-                        <td><button>Book Now</button></td>
-                    </tr>
-                </tbody>
-            </table>
+            <!-- English Tables -->
+            <div class="table-container" id="table-en" style="display:block;">
+                <h2 class="packages-table-title">Family Packages</h2>
+                <table class="packages-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Package Name</th>
+                            <th>Includes</th>
+                            <th>Price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="img/global-header.jpg" alt="Family Fun Pack" class="package-table-img"></td>
+                            <td>Family Fun Pack</td>
+                            <td>4 Entry Tickets<br>Free Lunch Vouchers<br>Photo Pass<br>Fast Track Access</td>
+                            <td>$120</td>
+                            <td><button>Book Now</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/global-header.jpg" alt="Kids' Day Out" class="package-table-img"></td>
+                            <td>Kids' Day Out</td>
+                            <td>1 Child Entry<br>Snack Pack<br>Meet & Greet with Mascots<br>Free Toy</td>
+                            <td>$35</td>
+                            <td><button>Book Now</button></td>
+                        </tr>
+                    </tbody>
+                </table>
 
-            <h2 class="packages-table-title">Individu Packages</h2>
-            <table class="packages-table">
-                <thead>
-                    <tr>
-                        <th>Image</th>
-                        <th>Package Name</th>
-                        <th>Includes</th>
-                        <th>Price</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <img src="img/global-header.jpg" alt="Adventure Seeker" class="package-table-img">
-                        </td>
-                        <td>
-                            Adventure Seeker
-                        </td>
-                        <td>
-                            Unlimited Rides<br>
-                            1 Meal Included<br>
-                            Souvenir Gift<br>
-                            Priority Entry
-                        </td>
-                        <td>$80</td>
-                        <td><button>Book Now</button></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="img/global-header.jpg" alt="Solo Explorer" class="package-table-img">
-                        </td>
-                        <td>
-                            Solo Explorer
-                        </td>
-                        <td>
-                            1 Entry Ticket<br>
-                            Snack Voucher<br>
-                            Photo Pass
-                        </td>
-                        <td>$40</td>
-                        <td><button>Book Now</button></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="img/global-header.jpg" alt="Couple's Escape" class="package-table-img">
-                        </td>
-                        <td>
-                            Couple's Escape
-                        </td>
-                        <td>
-                            2 Entry Tickets<br>
-                            Dinner for Two<br>
-                            VIP Lounge Access<br>
-                            Complimentary Photos
-                        </td>
-                        <td>$95</td>
-                        <td><button>Book Now</button></td>
-                    </tr>
-                </tbody>
-            </table>
+                <h2 class="packages-table-title">Individu Packages</h2>
+                <table class="packages-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Package Name</th>
+                            <th>Includes</th>
+                            <th>Price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="img/global-header.jpg" alt="Adventure Seeker" class="package-table-img"></td>
+                            <td>Adventure Seeker</td>
+                            <td>Unlimited Rides<br>1 Meal Included<br>Souvenir Gift<br>Priority Entry</td>
+                            <td>$80</td>
+                            <td><button>Book Now</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/global-header.jpg" alt="Solo Explorer" class="package-table-img"></td>
+                            <td>Solo Explorer</td>
+                            <td>1 Entry Ticket<br>Snack Voucher<br>Photo Pass</td>
+                            <td>$40</td>
+                            <td><button>Book Now</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/global-header.jpg" alt="Couple's Escape" class="package-table-img"></td>
+                            <td>Couple's Escape</td>
+                            <td>2 Entry Tickets<br>Dinner for Two<br>VIP Lounge Access<br>Complimentary Photos</td>
+                            <td>$95</td>
+                            <td><button>Book Now</button></td>
+                        </tr>
+                    </tbody>
+                </table>
 
-            <h2 class="packages-table-title">Season Packages</h2>
-            <table class="packages-table">
-                <thead>
-                    <tr>
-                        <th>Image</th>
-                        <th>Package Name</th>
-                        <th>Includes</th>
-                        <th>Price</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <img src="img/global-header.jpg" alt="Summer Splash" class="package-table-img">
-                        </td>
-                        <td>
-                            Summer Splash
-                        </td>
-                        <td>
-                            Entry Ticket<br>
-                            Water Park Access<br>
-                            Free Ice Cream<br>
-                            Souvenir Towel
-                        </td>
-                        <td>$60</td>
-                        <td><button>Book Now</button></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="img/global-header.jpg" alt="Winter Wonderland" class="package-table-img">
-                        </td>
-                        <td>
-                            Winter Wonderland
-                        </td>
-                        <td>
-                            Entry Ticket<br>
-                            Hot Chocolate Voucher<br>
-                            Snow Show Access<br>
-                            Photo with Santa
-                        </td>
-                        <td>$65</td>
-                        <td><button>Book Now</button></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="img/global-header.jpg" alt="Spring Bloom" class="package-table-img">
-                        </td>
-                        <td>
-                            Spring Bloom
-                        </td>
-                        <td>
-                            Entry Ticket<br>
-                            Flower Garden Tour<br>
-                            Picnic Set<br>
-                            Photo Pass
-                        </td>
-                        <td>$55</td>
-                        <td><button>Book Now</button></td>
-                    </tr>
-                </tbody>
-            </table>
+                <h2 class="packages-table-title">Season Packages</h2>
+                <table class="packages-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Package Name</th>
+                            <th>Includes</th>
+                            <th>Price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="img/global-header.jpg" alt="Summer Splash" class="package-table-img"></td>
+                            <td>Summer Splash</td>
+                            <td>Entry Ticket<br>Water Park Access<br>Free Ice Cream<br>Souvenir Towel</td>
+                            <td>$60</td>
+                            <td><button>Book Now</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/global-header.jpg" alt="Winter Wonderland" class="package-table-img"></td>
+                            <td>Winter Wonderland</td>
+                            <td>Entry Ticket<br>Hot Chocolate Voucher<br>Snow Show Access<br>Photo with Santa</td>
+                            <td>$65</td>
+                            <td><button>Book Now</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/global-header.jpg" alt="Spring Bloom" class="package-table-img"></td>
+                            <td>Spring Bloom</td>
+                            <td>Entry Ticket<br>Flower Garden Tour<br>Picnic Set<br>Photo Pass</td>
+                            <td>$55</td>
+                            <td><button>Book Now</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Bahasa Melayu Tables -->
+            <div class="table-container" id="table-ms" style="display:none;">
+                <h2 class="packages-table-title">Pakej Keluarga</h2>
+                <table class="packages-table">
+                    <thead>
+                        <tr>
+                            <th>Gambar</th>
+                            <th>Nama Pakej</th>
+                            <th>Termasuk</th>
+                            <th>Harga</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="img/global-header.jpg" alt="Pakej Keriangan Keluarga" class="package-table-img"></td>
+                            <td>Pakej Keriangan Keluarga</td>
+                            <td>4 Tiket Masuk<br>Baucar Makan Tengah Hari Percuma<br>Pas Foto<br>Laluan Pantas</td>
+                            <td>RM120</td>
+                            <td><button>Tempah Sekarang</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/global-header.jpg" alt="Hari Kanak-Kanak" class="package-table-img"></td>
+                            <td>Hari Kanak-Kanak</td>
+                            <td>1 Tiket Masuk Kanak-Kanak<br>Pek Snek<br>Bertemu Maskot<br>Mainan Percuma</td>
+                            <td>RM35</td>
+                            <td><button>Tempah Sekarang</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 class="packages-table-title">Pakej Individu</h2>
+                <table class="packages-table">
+                    <thead>
+                        <tr>
+                            <th>Gambar</th>
+                            <th>Nama Pakej</th>
+                            <th>Termasuk</th>
+                            <th>Harga</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="img/global-header.jpg" alt="Pencari Pengembaraan" class="package-table-img"></td>
+                            <td>Pencari Pengembaraan</td>
+                            <td>Permainan Tanpa Had<br>1 Hidangan Disediakan<br>Hadiah Cenderamata<br>Laluan Keutamaan</td>
+                            <td>RM80</td>
+                            <td><button>Tempah Sekarang</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/global-header.jpg" alt="Penjelajah Solo" class="package-table-img"></td>
+                            <td>Penjelajah Solo</td>
+                            <td>1 Tiket Masuk<br>Baucar Snek<br>Pas Foto</td>
+                            <td>RM40</td>
+                            <td><button>Tempah Sekarang</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/global-header.jpg" alt="Percutian Pasangan" class="package-table-img"></td>
+                            <td>Percutian Pasangan</td>
+                            <td>2 Tiket Masuk<br>Makan Malam untuk Dua<br>Akses Lounge VIP<br>Foto Percuma</td>
+                            <td>RM95</td>
+                            <td><button>Tempah Sekarang</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 class="packages-table-title">Pakej Musim</h2>
+                <table class="packages-table">
+                    <thead>
+                        <tr>
+                            <th>Gambar</th>
+                            <th>Nama Pakej</th>
+                            <th>Termasuk</th>
+                            <th>Harga</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="img/global-header.jpg" alt="Percikan Musim Panas" class="package-table-img"></td>
+                            <td>Percikan Musim Panas</td>
+                            <td>Tiket Masuk<br>Akses Taman Air<br>Aiskrim Percuma<br>Tuala Cenderamata</td>
+                            <td>RM60</td>
+                            <td><button>Tempah Sekarang</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/global-header.jpg" alt="Keajaiban Musim Sejuk" class="package-table-img"></td>
+                            <td>Keajaiban Musim Sejuk</td>
+                            <td>Tiket Masuk<br>Baucar Coklat Panas<br>Akses Pertunjukan Salji<br>Foto Bersama Santa</td>
+                            <td>RM65</td>
+                            <td><button>Tempah Sekarang</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/global-header.jpg" alt="Mekar Musim Bunga" class="package-table-img"></td>
+                            <td>Mekar Musim Bunga</td>
+                            <td>Tiket Masuk<br>Lawatan Taman Bunga<br>Set Berkelah<br>Pas Foto</td>
+                            <td>RM55</td>
+                            <td><button>Tempah Sekarang</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <h2 class="packages-table-title">View Packages Table (XML/XSLT)</h2>
             <p>
@@ -261,6 +297,25 @@
         // Optional: Close sidebar with ESC key
         document.addEventListener('keydown', function(e) {
             if (e.key === "Escape") closeSidebar();
+        });
+
+        // Language switching functionality
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Hide all tables
+                document.querySelectorAll('.table-container').forEach(table => {
+                    table.style.display = 'none';
+                });
+                
+                // Show selected table
+                const lang = this.getAttribute('data-lang');
+                document.getElementById('table-' + lang).style.display = 'block';
+            });
         });
     </script>
 </body>
